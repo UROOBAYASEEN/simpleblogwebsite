@@ -95,7 +95,10 @@ const Blogs :bloginterface[]= [
 
 
 
-const Page = (req:NextRequest,res:NextResponse) => {
+const Page = (
+
+  { params }: { params: { blog: string } }
+) => {
   const [blogsdata, setblogsdata] = useState<bloginterface>()
   interface commentdata{
     username:string,
@@ -127,7 +130,8 @@ const Page = (req:NextRequest,res:NextResponse) => {
 
     
 useEffect(()=>{
-    const {params}:any= req
+
+  
 const thisblog=Blogs.filter((val)=>val.route==params.blog)
 setblogsdata(thisblog[0])
 
