@@ -150,7 +150,7 @@ console.log(blogsdata)
        <p className='mt-5 md:text-3xl text-light  tracking-tighter '>{blogsdata.detailnote}</p>
        <p className='mt-5 md:text-4xl text-light tracking-tighter text-red-700'>Comments</p>
        {comments.map((val,ind)=><div>
-        <div className='flex justify-start gap-6 'key={ind}>
+        <div className='flex justify-start gap-6 ' key={ind}>
           <p className='text-2xl font-bold text-green-700 mt-6'>{val.username}:</p>
           <p className='text-2xl font-bold text-red-700 mt-6'>{val.comment}</p>
         </div>
